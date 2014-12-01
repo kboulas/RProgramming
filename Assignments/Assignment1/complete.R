@@ -16,7 +16,9 @@ complete <- function(directory, idVect = 1:332) {
         ## Initialize 
         id <- numeric()
         nobs <- numeric()
-        
+        ##complCases["id"] <- id
+        ##complCases["nobs"] <- nobs
+                
         ## Loop through the monitors
         for (i in idVect) {
                 
@@ -38,8 +40,8 @@ complete <- function(directory, idVect = 1:332) {
                 
         }
         
-        ## Bind the data frame
-        complCases <- cbind(id,nobs)
+        ## build the data frame
+        complCases <- data.frame(id,nobs)
         return(complCases)
         
 }
